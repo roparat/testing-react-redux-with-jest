@@ -1,17 +1,17 @@
 import { storiesOf, action, linkTo } from '@kadira/storybook'
+import { withKnobs, text, boolean } from '@kadira/storybook-addon-knobs'
 import React from 'react'
 
 import TodoItem from '../TodoItem'
 
 storiesOf('Story Name', module)
-  .addDecorator(story => (
-    <div>
-      {story()}
-    </div>
+  .addDecorator(withKnobs)
+  .addWithInfo('not complete', 'An incomplete todo item', () => (
+    <TodoItem text={text('Text', 'Not complete')} />
   ))
-  .add('not complete', () => (
-    <TodoItem text="hello" />
-  ))
-  .add('completed', () => (
-    <TodoItem text="completed" complete />
+  .addWithInfo('completed', 'An completed todo item', () => (
+    <TodoItem
+      text={text('Text', 'Completed')}
+      complete={boolean('Complete', true)}
+    />
   ))
