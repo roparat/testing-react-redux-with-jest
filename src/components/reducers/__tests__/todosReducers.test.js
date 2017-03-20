@@ -23,9 +23,9 @@ describe('todoReducer', () => {
     const action = {
       type: ADD_TODO,
       payload: { text: 'Sleep' },
-    }
+    } // not good, if we change actions
     const nextState = todosReducer(curState, action)
-    const expectedState =  [
+    const expectedState = [
       { id: 1, text: 'Feed cat', complete: false },
       { id: 2, text: 'Sleep', complete: false },
     ]
