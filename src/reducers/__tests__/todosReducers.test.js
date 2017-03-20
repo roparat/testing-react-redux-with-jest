@@ -1,5 +1,5 @@
 import todosReducer from '../todoReducer'
-import { ADD_TODO } from '../../../actions/types'
+import { ADD_TODO } from '../../actions/types'
 
 describe('todoReducer', () => {
   it('returns correct initial state', () => {
