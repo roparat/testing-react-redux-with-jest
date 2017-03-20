@@ -4,7 +4,7 @@ exports[`TodoItem matches its snapshot - completed 1`] = `
 <li
   className="complete"
 >
-  Complete
+  Text
 </li>
 `;
 
@@ -12,6 +12,6 @@ exports[`TodoItem matches its snapshot - not complete 1`] = `
 <li
   className=""
 >
-  Not complete
+  Text
 </li>
 `;
