@@ -10,9 +10,9 @@ class NewTodo extends Component {
     this.clickHandler = this.clickHandler.bind(this)
   }
   changeHandler(e) {
-    this.setState(prevState => ({
+    this.setState({
       text: e.target.value,
-    }))
+    })
   }
   clickHandler() {
     this.props.addTodo(this.state.text)
