@@ -1,14 +1,12 @@
-import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
-import Button from './Button';
-import Welcome from './Welcome';
+import React from 'react'
+import { storiesOf, action, linkTo } from '@kadira/storybook'
 
-storiesOf('Welcome', module)
-  .add('to Storybook', () => (
-  ));
+import TodoItem from '../src/components/TodoItem'
 
-storiesOf('Button', module)
-  .add('with text', () => (
+storiesOf('Todo Item', module)
+  .add('not complete', () => (
+    <TodoItem text="hello" />
   ))
-  .add('with some emoji', () => (
-  ));
+  .add('completed', () => (
+    <TodoItem text="completed" complete />
+  ))
