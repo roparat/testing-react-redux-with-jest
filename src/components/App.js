@@ -1,8 +1,12 @@
 import React from 'react'
-import TodoItem from './TodoItem';
+import TodoList from '../containers/TodoList';
+import NewTodo from '../containers/NewTodo';
 
 const App = () => (
-  <TodoItem text={'Hello React'} complete />
+  <div className="todo-app">
+    <NewTodo />
+    <TodoList />
+  </div>
 )
 
 export default App
