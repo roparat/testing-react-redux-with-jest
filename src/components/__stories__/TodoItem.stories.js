@@ -6,6 +6,9 @@ import TodoItem from '../TodoItem'
 
 storiesOf('Story Name', module)
   .addDecorator(withKnobs)
+  .addDecorator(story => (
+    <div style={{ textAlign: 'center' }}>{story()}</div>
+  ))
   .addWithInfo('not complete', 'An incomplete todo item', () => (
     <TodoItem text={text('Text', 'Not complete')} />
   ))
